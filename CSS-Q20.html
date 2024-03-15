@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ececec;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-top: 30px;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+
+        .blog-wrapper {
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .blog-card {
+                @include transition(.3s);
+                max-width: 300px;
+                margin: 15px;
+                background: #fff;
+                border: 1px solid #CB6074;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+
+                    .card-img {
+                        img {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+
+                .card-img {
+                    position: relative;
+                    text-align: center;
+                    background: #CB6074;
+
+                    img {
+                        @include transition(.3s);
+                        max-height: 180px;
+                        width: 100%;
+                        border-bottom: 4px solid #CB6074;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: 50%;
+                        margin-left: -10px;
+                        width: 0;
+                        height: 0;
+                        border-top: solid 10px #CB6074;
+                        border-left: solid 10px transparent;
+                        border-right: solid 10px transparent;
+                    }
+
+                    h1 {
+                        position: absolute;
+                        margin: 0;
+                        font-size: 42px;
+                        bottom: 15px;
+                        width: 100%;
+                        color: #fff;
+                        font-family: 'Slabo 27px', serif;
+                    }
+                }
+
+                .card-details {
+                    margin-top: 30px;
+                    font-family: 'Roboto', sans-serif;
+                    color: #3C3C3C;
+
+                    span {
+                        padding: 0 30px;
+
+                        i {
+                            margin-right: 5px;
+                        }
+
+                    }
+                }
+
+                .card-text {
+                    padding: 30px 15px;
+                    font-family: 'Roboto', sans-serif;
+                    line-height: 22px;
+                }
+
+                .read-more {
+                    @include transition(.3s);
+                    display: inline-block;
+                    width: auto;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background: #CB6074;
+                    color: #fff;
+                    padding: 15px;
+                    margin-bottom: 30px;
+                    font-family: 'Oswald', sans-serif;
+
+                    &:hover {
+                        background: darken(#CB6074, 20%);
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blog-wrapper">
+        <div class="blog-card">
+            <div class="card-img"><img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQYxfAmEPOEaVzNUVoMJZV1xz53SW1jNpiPjn9ZPeQd-pvjWyffcB2y0mNGt1TNE2CW">
+                <h1>Rajkot</h1>
+            </div>
+            <div class="card-details"><span><i class="fa fa-calendar"></i>AUG 4</span><span><i class="fa fa-heart"></i>102</span></div>
+            <div class="card-text">
+                <p>Rajkot is a city in the western Indian state of Gujarat. In central Jubilee Garden are the Lang Library, with Gujarati literature, and the Watson Museum, with paintings and artifacts documenting British colonial rule. Kaba Gandhi No Delo, the house where Mahatma Gandhi spent part of his childhood, displays photos of the Indian leader and his belongings. The Rotary Dolls Museum exhibits dolls from around the world.</p>
+            </div>
+            <div class="read-more">Read More</div>
+        </div>
+        <div class="blog-card">
+            <div class="card-img"><img src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR2BiV9hU9956w-Bvk9ktqRuyo7JGgfzJxMUoUJ_a2SRqOQZPNu1O-jjLVcQS7L2RnD">
+                <h1>Ahmedabad</h1>
+            </div>
+            <div class="card-details"><span><i class="fa fa-calendar"></i>AUG 4</span><span><i class="fa fa-heart"></i>102</span></div>
+            <div class="card-text">
+                <p>Ahmedabad, in western India, is the largest city in the state of Gujarat. 
+                    The Sabarmati River runs through its center. 
+                    On the western bank is the Gandhi Ashram at Sabarmati, which displays the spiritual leader’s living quarters and artifacts.</p>
+            </div>
+            <div class="read-more">Read More</div>
+        </div> <div class="blog-card">
+            <div class="card-img"><img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQt0_EWTL9xYESjpd-LlgMhIl3tKSQg_E3rxOpi56xdwCo7zAgTMzje2rVjdNBRZQPz">
+                <h1>Junagadh</h1>
+            </div>
+            <div class="card-details"><span><i class="fa fa-calendar"></i>AUG 4</span><span><i class="fa fa-heart"></i>102</span></div>
+            <div class="card-text">
+                <p>Junagadh is a city in the western Indian state of Gujarat. Mahabat Maqbara is the huge 19th-century mausoleum of a local ruler, which showcases intricate Indo-Islamic architectural details. Uparkot Fort, founded around 300 BC, has city views from its ramparts. Within the fort are the stone-cut stepwells Adi Kadi Vav and Navghan Kuwo, plus Buddhist caves. To the west, Darbar Hall Museum is housed in a former palace.</p>
+            </div>
+            <div class="read-more">Read More</div>
+        </div>
+        <div class="blog-card">
+            <div class="card-img"><img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTtI55uG_HLQ10nsKY30ggibWu-a2rRt04Jd_luLwlm6wAybomecX60VLh5eWW0nMXZ">
+                <h1>Porbandar</h1>
+            </div>
+            <div class="card-details"><span><i class="fa fa-calendar"></i>AUG 1</span><span><i class="fa fa-heart"></i>265</span></div>
+            <div class="card-text">
+                <p>Porbandar is a city in the Indian state of Gujarat, perhaps best known for being the birthplace of Mahatma Gandhi and Sudama. It is the administrative center of the Porbandar District and it was the former capital of the Porbandar princely state</p>
+            </div>
+            <div class="read-more">Read More</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
